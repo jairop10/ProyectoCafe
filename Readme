@@ -1,0 +1,149 @@
+Documentacion
+INTEGRANTES
+ - MICHAELL WILFREDO PEÑA LUIS
+ - JAIRO RICHARD PEÑA LUIS
+ - JEPSENT HENDRICK ENRIQUEZ CONDORI
+ - YANNELY VILLCA GUTIÉRREZ
+
+
+1. Resumen del Proyecto
+Este proyecto es un sistema de ventas para una cafetería que permite a los empleados gestionar el inventario de productos, crear pedidos y llevar un control de las ventas realizadas. La aplicación permite a los usuarios visualizar los productos, añadirlos a un carrito de compras, y confirmar pedidos.
+
+2. Objetivos del Proyecto
+    Optimizar el proceso de ventas: Facilitar la venta de productos de cafetería de forma rápida y organizada.
+    Control de inventario: Gestionar el stock de productos en tiempo real.
+    Gestión de pedidos: Registrar cada venta y almacenar la información del cliente y detalles de la compra.
+    Interfaz amigable: Ofrecer una experiencia de usuario intuitiva y atractiva.
+
+
+3. Tecnologías Utilizadas
+    Frontend: React.js, HTML, CSS
+    Backend: Laravel (PHP)
+    Base de datos: MySQL
+    Servidor local: Laragon
+    Entorno de desarrollo: Visual Studio Code
+4. Estructura del Proyecto
+    src/: Contiene todos los archivos de frontend.
+    components/: Componentes de React, como ProductoList, Carrito, ConfirmarCompra, etc.
+    styles/: Archivos CSS para estilizar los componentes.
+    App.js: Componente principal que gestiona las rutas y la estructura general de la aplicación.
+    public/: Archivos públicos, como el index.html.
+    backend/: Contiene los archivos de Laravel (Controladores, Modelos, Migraciones, etc.).
+5. Instalación y Configuración
+    Clonar el repositorio:
+
+    bash
+    Copiar código
+    git clone <url-del-repositorio>
+    Configurar el servidor:
+6. Componentes Principales
+    6.1. ProductoList
+    Muestra todos los productos disponibles y permite agregar productos al carrito, editar o eliminar productos.
+    6.2. Carrito
+    Contiene los productos seleccionados para la compra y muestra el total acumulado. Permite al usuario confirmar la compra y proceder al registro del pedido.
+    6.3. ConfirmarCompra
+    Formulario que recopila los datos del cliente para confirmar el pedido y registrarlo en la base de datos.
+    6.4. Navbar
+    Barra de navegación con enlaces a diferentes secciones como Inicio, Categorías, Lista de Pedidos y Clientes.
+7. Modelos y Controladores
+    Modelos
+    Producto: Define las propiedades de cada producto, como nombre, descripción, precio, stock, etc.
+    Categoria: Define las propiedades de cada categoría de productos.
+    Cliente: Almacena la información de los clientes.
+    Pedido: Registra cada pedido realizado.
+    DetallePedido: Almacena los detalles específicos de cada pedido, como productos y cantidades.
+    Controladores
+    ProductoController: Gestiona la creación, edición, eliminación y visualización de productos.
+    CategoriaController: Gestiona la creación, edición, eliminación y visualización de categorías.
+    ClienteController: Almacena la información de los clientes.
+    PedidoController: Registra los pedidos.
+    DetallePedidoController: Registra los detalles de cada pedido.
+8. Diseño de la Interfaz de Usuario (UI)
+    El diseño de la interfaz es intuitivo y está optimizado para usuarios que trabajan en una cafetería:
+
+    Tema: Colores cálidos y elementos que evocan el ambiente de una cafetería.
+    Diseño responsive: Compatible con dispositivos móviles y tabletas.
+    Componentes estilizados: Cada sección cuenta con un diseño atractivo y funcional.
+9. Características Clave
+    Carrito de compras: Permite a los usuarios agregar productos y ver el total de la compra.
+    Confirmación de pedidos: Una vez completado el pedido, se puede confirmar y almacenar la información del cliente.
+    Gestión de inventario: Cada producto muestra su cantidad en stock, y esta se reduce con cada compra confirmada.
+    Filtrado por categorías: Los productos se pueden filtrar por categoría para facilitar la búsqueda.
+10. Documentación de API
+    Las principales rutas de API son las siguientes:
+
+    Productos:
+
+    GET /api/productos - Lista todos los productos.
+    POST /api/productos - Crea un nuevo producto.
+    PUT /api/productos/{id} - Actualiza un producto.
+    DELETE /api/productos/{id} - Elimina un producto.
+    Categorías:
+
+    GET /api/categorias - Lista todas las categorías.
+    POST /api/categorias - Crea una nueva categoría.
+    Clientes:
+
+    POST /api/clientes - Crea un nuevo cliente.
+    Pedidos:
+
+    POST /api/pedidos - Crea un nuevo pedido.
+    Detalles de Pedido:
+
+    POST /api/detalles_pedido - Agrega detalles a un pedido específico.
+11. Consideraciones de Seguridad
+    Validación de formularios: Asegúrate de validar todos los datos ingresados por el usuario.
+    Protección contra CSRF: Laravel incluye protección contra ataques de tipo CSRF por defecto.
+    Protección de datos: Cifrar datos sensibles del cliente, como contraseñas o información privada.
+12. Pruebas
+    Pruebas unitarias: Laravel permite crear pruebas unitarias para los controladores y modelos.
+    Pruebas de integración: Validar que todos los componentes de la aplicación funcionen correctamente juntos.
+    Pruebas de UI: Realizar pruebas manuales para asegurar que la interfaz sea intuitiva y que los elementos estén correctamente alineados.
+13. Despliegue
+    Configurar el servidor: Asegúrate de tener un servidor con soporte para PHP y MySQL.
+    Subir archivos: Sube el código del frontend y backend al servidor.
+    Configurar el archivo .env: Asegúrate de configurar las credenciales de la base de datos y otros detalles de entorno.
+    Ejecutar migraciones: Corre las migraciones de Laravel para crear las tablas en la base de datos.
+14. Mantenimiento y Actualizaciones
+    Actualizaciones periódicas: Mantén actualizadas las dependencias de npm y composer.
+    Revisión de código: Periódicamente revisa el código para asegurarte de que esté limpio y optimizado.
+    Respaldo de datos: Realiza respaldos regulares de la base de datos para evitar pérdidas de información.
+
+
+
+Instalar dependencias:
+
+Frontend:
+bash
+Copiar código
+cd frontend
+npm install
+Backend:
+bash
+Copiar código
+cd backend
+composer install
+php artisan migrate
+php artisan serve
+Iniciar el servidor de desarrollo:
+
+En el frontend:
+bash
+Copiar código
+npm start
+En el backend:
+bash
+Copiar código
+php artisan serve
+
+
+
+Si descargas tienes que colocar la carpeta en laragon/www/ , ingresamos a laragon le damos a la terminal y lo siguiente: 
+1. prender servidor
+    cd ProyectoCafeteria
+    php artisan migrate   //migrar base de datos
+    php artisan serve
+2. Abrimos otra terminal 
+    cd ProyectoCafeteria
+    cd frontend
+    npm start
